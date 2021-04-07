@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
-from scrapper import get_jobs
+from so_scrapper import get_jobs as so_jobs
+from indeed_scrapper import get_jobs as indeed_jobs
 
 app = Flask("SuperScrapper")
 
@@ -18,7 +19,7 @@ def report():
     if existingJobs:
       jobs = existingJobs
     else:
-      jobs = get_jobs(word)
+      jobs = so_jobs(word) + indeed_jobs(word)
       db[word] = jobs 
   else:
     return redirect("/")

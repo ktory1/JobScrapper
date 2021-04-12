@@ -40,11 +40,10 @@ def export():
     jobs = db.get(word)
     if not jobs:
       raise Exception()
-    save_to_file(jobs)
+    save_to_file(jobs,word)
     return send_file(
-      "jobs.csv",
+      f"{word}_jobs.csv",
       mimetype="text/csv",
-      attachment_filename="jobs.csv",
       as_attachment = True
       )
   except:

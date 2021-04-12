@@ -53,7 +53,7 @@ def extract_jobs(last_pages, url):
   return jobs
 
 def get_jobs(word):
-  url = f"https://ca.indeed.com/jobs?q={word}&l=Vancouver%2C+BC&limit={LIMIT}"
+  url = f"https://ca.indeed.com/jobs?q={word}&l=Canada&limit={LIMIT}"
   last_page = get_last_page(url)
   jobs = extract_jobs(last_page, url)
   return jobs

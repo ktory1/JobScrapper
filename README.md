@@ -1,6 +1,6 @@
 # JobScrapper
 
-Simple webscrapper built with Python using Django and Flask packages
+Simple webscrapper built with Python using Flask
 
 Takes in a keyword to search and present available jobs from Stack Overflow and Indeed.com
 
